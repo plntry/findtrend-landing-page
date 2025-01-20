@@ -114,7 +114,6 @@ p {
 }
 
 .navbar__container {
-  background-color: brown;
   max-width: 1293px;
   margin: 0 auto;
   display: flex;
@@ -194,6 +193,65 @@ p {
   font-size: 18px;
 }
 
+/* Mobile Menu */
+.navbar__mobile-menu {
+  display: none;
+}
+
+.navbar__toggle-mobile-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__toggle-mobile-menu svg {
+  width: 25px;
+  height: 24px;
+}
+
+.navbar__toggle-mobile-menu path {
+  stroke: var(--white);
+}
+
+.navbar__toggle-mobile-menu:hover path {
+  stroke: var(--light-gray);
+}
+
+.navbar__mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-bg-color);
+  opacity: 0.95;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar__mobile-menu-items--active {
+  transform: translateX(0);
+}
+
+.navbar__mobile-menu-list,
+.navbar__mobile-auth-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.navbar__mobile-auth-item {
+  width: max-content;
+}
+
 :root {
   /* Main Colors */
   --black: #050505;
@@ -209,7 +267,7 @@ p {
   --body-bg-color: var(--black);
 
   /* Scroll Colors */
-  --navbar-bg-scroll-color: rgb(255, 255, 255, 0.8);
+  --navbar-bg-scroll-color: rgb(23, 23, 23, 0.8);
 
   /* Font Sizes */
   --h1-font-size: 72px;
@@ -227,9 +285,16 @@ p {
     display: none;
   }
 
-
+  /* Mobile Menu */
+  .navbar__mobile-menu {
+    display: block;
+  }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 36px 18px;
+  }
+}
 
 @media (max-width: 576px) {}
