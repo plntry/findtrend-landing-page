@@ -81,6 +81,7 @@ p {
 .button--primary {
   background-color: var(--primary-color);
   color: var(--black);
+  font-weight: 600;
 }
 
 .button--primary:hover {
@@ -93,7 +94,7 @@ p {
 }
 
 .button--dark:hover {
-  background-color: var(--dark-gray);
+  background-color: var(--light-black);
 }
 
 /* Navbar */
@@ -149,7 +150,7 @@ p {
   font-weight: 500;
 }
 
-.navbar__menu-link { 
+.navbar__menu-link {
   font-size: 18px;
 }
 
@@ -252,15 +253,109 @@ p {
   width: max-content;
 }
 
+/* Hero */
+.hero {
+  padding: 11.5rem 2rem 8rem;
+  position: relative;
+}
+
+.hero__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 46px;
+  /* background-color: red; */
+}
+
+.hero__content {
+  max-width: 739px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+  line-height: 1.2;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__description {
+  color: var(--gray);
+}
+
+.hero__label-image {
+  position: absolute;
+  top: 38%;
+  left: 61%;
+}
+
+.hero__label-image {
+  width: 130px;
+}
+
+/* Hero Tabs */
+.hero__tabs {
+  position: relative;
+}
+
+.hero__tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 37px;
+  width: 339px;
+  background-color: var(--light-black);
+}
+
+.hero__tab-icon i.fa-twitter {
+  color: #1DA1F2;
+}
+
+.hero__tab-icon i.fa-pinterest {
+  color: #E60019;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.hero__tab-icon i.fa-facebook {
+  color: #1877F2;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.hero__tab-icon i.fa-dribbble {
+  color: #EA4C89;
+  background-color: #C32361;
+  border-radius: 50%;
+}
+
+.hero__tab-title {
+  white-space: pre;
+  font-size: 18px;
+}
+
+.hero__tab-close-button {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(268.65deg, var(--light-black) 42.82%, rgba(24, 24, 24, 0.8) 92.18%);
+  height: 100%;
+}
+
 :root {
   /* Main Colors */
   --black: #050505;
-  --white: #FFFFFF;
-  --dark-gray: #181818;
-  --light-gray:#d8d8d8;
+  --light-black: #181818;
+  --white: #ffffff;
+  --gray: #7b7b7b;
+  --light-gray: #d8d8d8;
 
   /* Primary Colors */
-  --primary-color: #A8FF35;
+  --primary-color: #a8ff35;
   --primary-color-dark: #8ed82e;
 
   /* Body Colors */
@@ -289,12 +384,24 @@ p {
   .navbar__mobile-menu {
     display: block;
   }
-}
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 36px 18px;
+  /* Hero */
+  .hero__label-image {
+    left: 65vw;
   }
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 36px 18px;
+  }
+
+  /* Hero */
+  .hero__label-image {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+}
