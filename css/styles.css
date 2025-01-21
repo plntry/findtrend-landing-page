@@ -14,8 +14,8 @@ body {
 }
 
 body {
-  background-color: var(--body-bg-color);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
 }
 
 ::selection {
@@ -59,6 +59,17 @@ p {
 .container {
   max-width: 1160px;
   margin: 0 auto;
+}
+
+/* Section */
+.section--primary {
+  background-color: var(--primary-color);
+  color: var(--black);
+}
+
+.section--secondary {
+  background-color: var(--black);
+  color: var(--white);
 }
 
 /* Button */
@@ -390,11 +401,6 @@ p {
 }
 
 /* Open Tabs */
-.open-tabs {
-  background-color: var(--primary-color);
-  color: var(--black);
-}
-
 .open-tabs__container {
   display: flex;
   flex-direction: column;
@@ -451,6 +457,18 @@ p {
 
 .open-tabs__bottom-text {
   font-weight: 500;
+}
+
+/* Advantage */
+.advantage__container {
+  padding: 148px 0;
+}
+
+.advantage__text {
+  font-size: 64px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 79px;
 }
 
 :root {
@@ -563,6 +581,17 @@ p {
 
   .open-tabs__bottom-text {
     font-size: 14px;
+  }
+
+  /* Advantage */
+  .advantage__container {
+    padding: 59.5px 29.5px;
+  }
+
+  .advantage__text {
+    font-size: 36px;
+    line-height: 44px;
+    text-align: start;
   }
 }
 
