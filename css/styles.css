@@ -333,7 +333,8 @@ p {
   z-index: 1;
 }
 
-.hero__tab-content {
+.hero__tab-content,
+.open-tabs__tab-content {
   position: relative;
   display: flex;
   align-items: center;
@@ -365,12 +366,14 @@ p {
   border-radius: 50%;
 }
 
-.hero__tab-title {
+.hero__tab-title,
+.open-tabs__tab-title {
   white-space: pre;
   font-size: 18px;
 }
 
-.hero__tab-close-button {
+.hero__tab-close-button,
+.open-tabs__tab-close-button {
   position: absolute;
   right: 0;
   display: flex;
@@ -384,6 +387,70 @@ p {
   );
   height: 100%;
   cursor: pointer;
+}
+
+/* Open Tabs */
+.open-tabs {
+  background-color: var(--primary-color);
+  color: var(--black);
+}
+
+.open-tabs__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 51px;
+  padding: 77px 18px 94px;
+  max-width: 772px;
+}
+
+.open-tabs__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 62px;
+}
+
+.open-tabs__illustration {
+  position: relative;
+}
+
+.open-tabs__tab {
+  color: var(--white);
+  background-color: var(--white);
+  padding: 55px 85px;
+  width: max-content;
+  border-radius: 16px;
+}
+
+.open-tabs__tab-content {
+  min-height: 78px;
+}
+
+.open-tabs__tab-image {
+  width: 40.5px;
+}
+
+.open-tabs__illustration-image {
+  position: absolute;
+}
+
+.open-tabs__illustration-image:first-of-type {
+  width: 109px;
+  top: 50%;
+  left: -28%;
+  transform: translateY(-50%);
+}
+
+.open-tabs__illustration-image:last-of-type {
+  width: 118px;
+  top: 0;
+  right: -30%;
+}
+
+.open-tabs__bottom-text {
+  font-weight: 500;
 }
 
 :root {
@@ -462,6 +529,41 @@ p {
     transform: translate(-50%, -100%) rotate(-5.92deg);
     z-index: 3;
   }
+
+  /* Open Tabs */
+  .open-tabs__container {
+    gap: 95px;
+    padding: 74px 18px 31px;
+  }
+
+  .open-tabs__content {
+    gap: 106px;
+  }
+
+  .open-tabs__tab {
+    padding: 18px 34px;
+  }
+
+  .open-tabs__tab-content {
+    width: 265px;
+    padding: 19px 14.25px;
+  }
+
+  .open-tabs__illustration-image:first-of-type {
+    top: 58%;
+    left: 20%;
+    transform: rotate(-60.45deg);
+  }
+
+  .open-tabs__illustration-image:last-of-type {
+    top: -87%;
+    right: -3%;
+    transform: rotate(-21.96deg);
+  }
+
+  .open-tabs__bottom-text {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -476,8 +578,8 @@ p {
   :root {
     /* Font Sizes */
     --h1-font-size: 37px;
-    /* --h2-font-size: 66px;
-    --h3-font-size: 52px;
+    --h2-font-size: 31px;
+    /* --h3-font-size: 52px;
     --h4-font-size: 24px; */
     --p-font-size: 14px;
   }
