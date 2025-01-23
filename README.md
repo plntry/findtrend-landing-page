@@ -34,4 +34,4 @@ This project is based on a community Figma design. You can access the original d
 
 This project is hosted on GitHub Pages. You can view it directly by clicking the link below:
 
-👉 [**Tian Community Landing Page Live Demo**](https://plntry.github.io/findtrend-landing-page/)
+👉 [**Findtrend Landing Page Live Demo**](https://plntry.github.io/findtrend-landing-page/)
