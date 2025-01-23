@@ -513,12 +513,15 @@
       <section class="packets section--secondary">
         <div class="packets__container container">
           <h2 class="packets__title">Get Your Best deal</h2>
-          <input
-            class="packets__checkbox"
-            type="checkbox"
-            name="Packet Subscription"
-            id="packet-subscription"
-          />
+          <div class="packets__checkbox-wrapper">
+            <p class="packets__checkbox-label packets__checkbox-label--active">Monthly</p>
+            <p class="packets__checkbox-label">Yearly</p>
+            <div class="packets__arrow-image">
+              <img src="images/save-10-persents.png" alt="Save 10% per month">
+            </div>
+            <input class="packets__checkbox tgl tgl-light" id="packet-subscription" name="Packet Subscription" type="checkbox"/>
+            <label class="tgl-btn" for="packet-subscription">
+          </div>
           <div class="packets__list">
             <div class="packets__list-item">
               <div class="packets__item-content">
