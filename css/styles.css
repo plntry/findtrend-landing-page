@@ -562,6 +562,116 @@ p {
   max-width: 800px;
 }
 
+/* Packets */
+.packets__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 98px 0 75px;
+}
+
+.packets__title {
+  color: #d9d9d9;
+  font-size: 52px;
+}
+
+.packets__checkbox {
+}
+
+.packets__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 39px;
+  width: 100%;
+}
+
+.packets__list-item {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 29px 32px;
+  border-radius: 20px;
+  min-width: 339px;
+  min-height: 535px;
+  position: relative;
+}
+
+.packets__list-item--active {
+  background-color: var(--primary-color);
+}
+
+.packets__item-content {
+  padding-bottom: 17px;
+}
+
+.packets__item-title {
+  font-size: 30px;
+}
+
+.packets__item-description {
+  font-size: 18px;
+  font-weight: 500;
+  color: #585858;
+}
+
+.packets__item-pricing {
+  padding: 13px 0 9px;
+  display: flex;
+  align-items: flex-end;
+  color: #1e1e1e;
+  gap: 10px;
+}
+
+.packets__item-price {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 74px;
+}
+
+.packets__item-duration {
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.packets__features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.packets__features-item {
+  position: relative;
+  padding-left: 27px;
+}
+
+.packets__features-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 17.4px;
+  height: 20px;
+  background: url("../images/packet-marker.png") no-repeat center;
+  background-size: contain;
+}
+
+.packets__item-button {
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 32px);
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+  min-width: 259px;
+}
+
+.packets__list-item--active .packets__item-button {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 :root {
   /* Main Colors */
   --black: #050505;
@@ -710,6 +820,23 @@ p {
 
   .platforms__images {
     gap: 53px;
+  }
+
+  /* Packets */
+  .packets__container {
+    padding: 79px 25px 30px;
+  }
+
+  .packets__title {
+    font-size: 43px;
+  }
+
+  .packets__checkbox {
+  }
+
+  .packets__list {
+    width: max-content;
+    grid-template-columns: 1fr;
   }
 }
 
